@@ -1,6 +1,7 @@
 <script>
 import { store } from "../store.js" //state management
 import register from "../debug" //per debuggare il componente da console
+import axios from 'axios'; //importo Axios
 
 export default {
     name: "AppComponent",
@@ -9,15 +10,25 @@ export default {
             store
         }
     },
-    methods: {
-        doThings() {
-            console.log("AppComponent does things");
-        }
-    },
-    mounted() {
-        register(this); //per debuggare il componente da console
-        this.doThings();
-    }
+    // mounted() {
+	// 	this.getEventList();
+	// },
+    // methods: {
+    //     getEventList() {
+	// 		//let url = this.store.apiUrl + this.store.apiEndPoint;
+
+	// 	axios.get("url").then(risultato => {
+	// 		if(risultato.status === 200 && risultato.data.success){
+	// 			console.log(risultato.data.payload);
+	// 			this.store.eventList = risultato.data.payload;
+	// 		}else{
+	// 			console.log("something went wrong")
+	// 		}
+	// 	}).catch(errore => {
+	// 		console.error(errore);
+	// 	});
+	// 	}
+    // }
 }
 </script>
 
