@@ -53,7 +53,7 @@ export default {
 <template>
 	<header>
 		<span v-for="(item, index) in menuItems" :key="index">
-			<router-link :to = "{name: item.route params: { id: eventId }}" class="nav-link">
+			<router-link :to = "{name: item.route params: { id: eventId }}" class="nav-link"> <!--errore params-->
 				{{item.label}}
 			</router-link>
 		</span>
