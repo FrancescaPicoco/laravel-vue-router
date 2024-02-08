@@ -17,15 +17,18 @@ export default {
 		this.getEventList();
 	},
     methods: {
-		
+
         getEventList() {
 
 	    let url = this.store.apiUrl + this.store.apiEndPoint;
         console.log(url);
 		axios.get("url").then(risultato => {
+			console.log(risultato.status); //status ok 
+			console.log(risultato.data.success); //undefined
 			if(risultato.status === 200 && risultato.data.success){
 				console.log(risultato.data.payload);
 				this.store.eventList = risultato.data.payload;
+				console.log(risultato.data.payload);
 			}else{
 				console.log("something went wrong")
 			}
