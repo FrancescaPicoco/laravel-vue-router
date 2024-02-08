@@ -44,7 +44,8 @@ export default {
         <div class="row">
             <div class="col-6" v-for=" event in store.eventList">                
               <div class="card" style="width: 18rem">
-                  <!-- <img src={{ this.event.poster }} class="card-img-top" alt="event.artist" /> -->
+				<img :src="event.poster" class="card-img-top" :alt="event.artist" /> 
+				<!--agg i : per richiamare array -->
                    <div class="card-body">
                       <h5 class="card-title">{{event.artist}}</h5> 
                       <h5 class="card-title">{{event.name}}</h5>
