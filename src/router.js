@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
 import EventHome from './components/pages/EventHome.vue';
 import EventList from './components/pages/EventList.vue';
 import EventDetails from './components/pages/EventDetails.vue';
@@ -7,6 +6,7 @@ import EventDetails from './components/pages/EventDetails.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
+      
         {
             path: '/',
             name: 'home',
@@ -18,11 +18,12 @@ const router = createRouter({
             component: EventList
         },
         {
-            path: '/details',
+            path: '/eventi/:id',
             name: 'details',
-            component: EventDetails
-        }
+            component: EventDetails,
+            props : true
+        },
+       
     ]
 });
-
 export { router };
